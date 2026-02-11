@@ -25,28 +25,32 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _input = GetComponent<PlayerI>();
-        _animator = GetComponent<Animator>();
         _controller = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 Hmove = (moveSpeed * _input.moveInput.magnitude * Time.deltaTime) * transform.forward;
-        _controller.Move(Hmove);
+        
 
         if (groundDetector.isTouching)
         {
             _verticalVelocity = Physics.gravity * (fallFactor * Time.deltaTime);
+            _animator.SetBool("OnLand", true);
+            
 
             if (_input.jumpInput)
             {
                 _verticalVelocity = Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
-                _animator.SetBool("Jump", true);
+                _animator.SetBool("OnJump", true);
             }
             else
             {
-                _animator.SetBool("Jump", false);
+                _animator.SetBool("OnJump", false);
+                
             }
             
             
@@ -62,25 +66,29 @@ public class PlayerController : MonoBehaviour
             }
 
             
-            if (_controller.velocity.y > 0)
-            {
-                _verticalVelocity += Physics.gravity * Time.deltaTime;
-            }
-            else
-            {
-                _verticalVelocity = Physics.gravity * (fallFactor * Time.deltaTime);
-            }
+             if (_controller.velocity.y > 0)
+             {
+                 _verticalVelocity += Physics.gravity * Time.deltaTime;
+             }
+             else
+             {
+                 _verticalVelocity += Physics.gravity * (fallFactor * Time.deltaTime);
+                 
+             }
         }
         else
         {
             _verticalVelocity += Physics.gravity * Time.deltaTime;
+            
+            
         }
         
-        
+        _controller.Move(Hmove);
 
         if (_input.moveInput.magnitude < 0.1)
         {
             _animator.SetFloat("OnMove", _input.moveInput.magnitude);
+            
         }
         if (_input.moveInput.magnitude >= 0.20)
         {
@@ -96,6 +104,7 @@ public class PlayerController : MonoBehaviour
         Quaternion cameraRotation = Camera.main.transform.rotation;
         Quaternion rotation = Quaternion.Euler(0, cameraRotation.eulerAngles.y, 0) * InputRotation;
 
+        _controller.Move(Hmove * Time.deltaTime + _verticalVelocity * Time.deltaTime);
         if (Hmove.sqrMagnitude > 0.001f)
         {
             transform.rotation = rotation;
