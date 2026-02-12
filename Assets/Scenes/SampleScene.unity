@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 7576304}
   - component: {fileID: 7576310}
   m_Layer: 0
-  m_Name: Key (1)
+  m_Name: purpleKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,11 +156,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 648280708}
 --- !u!33 &7576305
@@ -808,9 +808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -1160,7 +1157,7 @@ GameObject:
   - component: {fileID: 27955072}
   - component: {fileID: 27955078}
   m_Layer: 0
-  m_Name: Key (3)
+  m_Name: greenKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1181,11 +1178,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1774184555}
 --- !u!33 &27955073
@@ -1833,9 +1830,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -4447,6 +4441,73 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &150125454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 150125457}
+  - component: {fileID: 150125456}
+  - component: {fileID: 150125455}
+  m_Layer: 0
+  m_Name: Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &150125455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150125454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a0b366be4aee9344af814bd90d1ed32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnZone: {fileID: 1408441612}
+--- !u!65 &150125456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150125454}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.7900906, y: 0.23704529, z: 5.1254787}
+  m_Center: {x: 0.14922428, y: -0.38147736, z: 0.09518576}
+--- !u!4 &150125457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150125454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.78, y: -7.8, z: 4.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158326515
 GameObject:
   m_ObjectHideFlags: 0
@@ -4534,7 +4595,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -13469,7 +13530,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09494364, y: -3.2897844e-11, z: 3.137615e-12, w: 0.9954827}
-  m_LocalPosition: {x: 18.9, y: 3.56, z: -44.73}
+  m_LocalPosition: {x: 14.6, y: 3.46, z: 0.88999987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17008,7 +17069,7 @@ GameObject:
   - component: {fileID: 573384764}
   - component: {fileID: 573384763}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: blueDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19468,7 +19529,7 @@ GameObject:
   - component: {fileID: 716390229}
   - component: {fileID: 716390228}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: yellowDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19821,7 +19882,7 @@ GameObject:
   - component: {fileID: 725976903}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19835,7 +19896,7 @@ Transform:
   m_GameObject: {fileID: 725976897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.9, y: 1.31, z: -40.73}
+  m_LocalPosition: {x: 14.6, y: 1.21, z: 4.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27944,7 +28005,7 @@ GameObject:
   - component: {fileID: 910168442}
   - component: {fileID: 910168448}
   m_Layer: 0
-  m_Name: FinalKey
+  m_Name: RedKey1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28617,9 +28678,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -29155,7 +29213,7 @@ GameObject:
   - component: {fileID: 951771886}
   - component: {fileID: 951771885}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: orangeDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29909,7 +29967,7 @@ GameObject:
   - component: {fileID: 1004567343}
   - component: {fileID: 1004567349}
   m_Layer: 0
-  m_Name: Key (6)
+  m_Name: yellowKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29930,11 +29988,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1326149860}
 --- !u!33 &1004567344
@@ -30582,9 +30640,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -31969,7 +32024,7 @@ GameObject:
   - component: {fileID: 1139373063}
   - component: {fileID: 1139373069}
   m_Layer: 0
-  m_Name: Key (4)
+  m_Name: blueKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31990,11 +32045,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1816890092}
 --- !u!33 &1139373064
@@ -32642,9 +32697,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -33181,7 +33233,7 @@ GameObject:
   - component: {fileID: 1216282374}
   - component: {fileID: 1216282380}
   m_Layer: 0
-  m_Name: Key (5)
+  m_Name: RedKey2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33202,11 +33254,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 878047853}
 --- !u!33 &1216282375
@@ -33240,7 +33292,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: e09f3c545cc283249bb075240a93f7b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33854,9 +33906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -35735,7 +35784,7 @@ GameObject:
   - component: {fileID: 1351412907}
   - component: {fileID: 1351412906}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: greenDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36071,6 +36120,59 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 589264779}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1408441610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408441612}
+  - component: {fileID: 1408441611}
+  m_Layer: 0
+  m_Name: SpawnZone
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1408441611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408441610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1408441612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408441610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.31, y: 1.6, z: -3.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1413667971
 Mesh:
@@ -40191,7 +40293,7 @@ GameObject:
   - component: {fileID: 1895810096}
   - component: {fileID: 1895810102}
   m_Layer: 0
-  m_Name: Key (2)
+  m_Name: orangeKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40212,11 +40314,11 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 370085443}
 --- !u!33 &1895810097
@@ -40845,7 +40947,7 @@ Transform:
   m_GameObject: {fileID: 1895810095}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.017967, y: -2.3139677, z: -27.216373}
+  m_LocalPosition: {x: 29.017967, y: -8.37, z: -27.216373}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40864,9 +40966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.88
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 0
   RotationForce: 2
   rotateAngle: 1
   isGrabbed: 0
@@ -41104,7 +41203,7 @@ Transform:
   m_GameObject: {fileID: 1920847380}
   serializedVersion: 2
   m_LocalRotation: {x: 0.094943635, y: -3.2036096e-11, z: -5.8978144e-12, w: 0.9954827}
-  m_LocalPosition: {x: 18.9, y: 3.56, z: -44.73}
+  m_LocalPosition: {x: 14.6, y: 3.46, z: 0.88999987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51035,7 +51134,7 @@ GameObject:
   - component: {fileID: 2137008710}
   - component: {fileID: 2137008709}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: PurpleDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51396,3 +51495,5 @@ SceneRoots:
   - {fileID: 845872726}
   - {fileID: 589264779}
   - {fileID: 914120000}
+  - {fileID: 150125457}
+  - {fileID: 1408441612}
