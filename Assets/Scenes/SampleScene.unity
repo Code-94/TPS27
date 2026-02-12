@@ -20231,7 +20231,19 @@ MonoBehaviour:
     m_ActionId: 0e765834-787a-48f5-a141-f8f11425f019
     m_ActionName: 'Player/Sprint[/DualShock4GamepadHID/rightTrigger]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725976900}
+        m_TargetAssemblyTypeName: PlayerI, Assembly-CSharp
+        m_MethodName: OnPunch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4b1cf1d2-5f4f-4151-b5bc-f7fe102a067d
     m_ActionName: 'Player/Punch[/DualShock4GamepadHID/buttonWest]'
   m_NeverAutoSwitchControlSchemes: 0

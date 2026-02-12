@@ -64,6 +64,15 @@ public class PlayerController : MonoBehaviour
                 _input.sprintInput = 0f;
                 _animator.SetFloat("OnSprint", _input.sprintInput);
             }
+            
+            if (_input.punchInput)
+            {
+                _animator.SetBool("OnPunch", true);
+            }
+            else
+            {
+                _animator.SetBool("OnPunch", false);
+            }
 
             
              if (_controller.velocity.y > 0)
@@ -79,11 +88,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             _verticalVelocity += Physics.gravity * Time.deltaTime;
-            
-            
         }
         
         _controller.Move(Hmove);
+
+        
 
         if (_input.moveInput.magnitude < 0.1)
         {
