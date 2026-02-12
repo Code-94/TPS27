@@ -11,12 +11,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Detector groundDetector;
     [SerializeField] private float fallFactor;
     [SerializeField] private float jumpHeight;
+    [SerializeField] private float punchForce;
+    [SerializeField] private TargetDetector target1;
 
     private PlayerI _input;
     private Animator _animator;
     private CharacterController _controller;
     private float _horizontalVelocity;
     private Vector3 _verticalVelocity;
+    
     
     
 
@@ -28,6 +31,7 @@ public class PlayerController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         
+
     }
 
     // Update is called once per frame
@@ -65,9 +69,17 @@ public class PlayerController : MonoBehaviour
                 _animator.SetFloat("OnSprint", _input.sprintInput);
             }
             
+            
             if (_input.punchInput)
             {
                 _animator.SetBool("OnPunch", true);
+                _animator.SetBool("Punching", true);
+                var smashedObj = target1.Smashed();
+            
+                foreach (Collider collect in smashedObj)
+                {
+                    collect.transform.position =  punchForce * Vector3.up;
+                }
             }
             else
             {
