@@ -4,6 +4,7 @@ using UnityEngine;
 public class Respawn : MonoBehaviour
 {
     [SerializeField] private Transform spawnZone;
+    [SerializeField] private Transform player;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,7 +22,8 @@ public class Respawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.transform.position = spawnZone.position;
+            Debug.Log("respawn");
+            player.transform.position = spawnZone.transform.position;
         }
     }
 }
