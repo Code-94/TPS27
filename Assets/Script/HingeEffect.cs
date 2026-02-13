@@ -17,7 +17,7 @@ public class HingeEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_key.isGrabbed == true)
+        if (_key != null && _key.isGrabbed == true)
         {
             transform.Rotate(rotationForce * Vector3.up, rotationAngle);
         }

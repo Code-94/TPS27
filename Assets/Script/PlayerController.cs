@@ -73,12 +73,12 @@ public class PlayerController : MonoBehaviour
             if (_input.punchInput)
             {
                 _animator.SetBool("OnPunch", true);
-                _animator.SetBool("Punching", true);
+                
                 var smashedObj = target1.Smashed();
             
                 foreach (Collider collect in smashedObj)
                 {
-                    collect.transform.position =  punchForce * Vector3.up;
+                    collect.transform.Translate(Vector3.forward * punchForce);
                 }
             }
             else
