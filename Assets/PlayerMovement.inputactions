@@ -68,6 +68,17 @@
                 },
                 {
                     "name": "",
+                    "id": "39183eec-4bf2-4774-87a8-aa730c44fdec",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "68d93af4-ba30-4fef-bb45-3d0dee380c0e",
                     "path": "<DualShockGamepad>/rightTrigger",
                     "interactions": "",
@@ -79,8 +90,30 @@
                 },
                 {
                     "name": "",
+                    "id": "b7c15652-2d13-4e6f-bd31-91a2b7666f50",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "01c305ae-aab1-4348-a1a9-cfc132ab571e",
                     "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Punch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "066c55e7-101a-4e21-b671-dd12ad420038",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
