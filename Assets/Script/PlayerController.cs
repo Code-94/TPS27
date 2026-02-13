@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _controller;
     private float _horizontalVelocity;
     private Vector3 _verticalVelocity;
+    private bool isFalllingDone;
     
     
     
@@ -47,17 +48,19 @@ public class PlayerController : MonoBehaviour
         if (groundDetector.isTouching)
         {
             _verticalVelocity = Physics.gravity * (fallFactor * Time.deltaTime);
-            _animator.SetBool("OnLand", true);
+            _animator.SetBool("OnJump", false);
+            
             
 
             if (_input.jumpInput)
             {
                 _verticalVelocity = Vector3.up * Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y);
-                _animator.SetBool("OnJump", true);
+                
             }
             else
             {
-                _animator.SetBool("OnJump", false);
+                
+                
                 
             }
             
@@ -105,6 +108,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             _verticalVelocity += Physics.gravity * Time.deltaTime;
+            _animator.SetBool("OnJump", true);
         }
         
         _controller.Move(Hmove);
