@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
 
@@ -13,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpHeight;
     [SerializeField] private float punchForce;
     [SerializeField] private TargetDetector target1;
+    [SerializeField] private float rotateAngle;
 
     private PlayerI _input;
     private Animator _animator;
@@ -75,10 +78,14 @@ public class PlayerController : MonoBehaviour
                 _animator.SetBool("OnPunch", true);
                 
                 var smashedObj = target1.Smashed();
-            
+                
+                
                 foreach (Collider collect in smashedObj)
                 {
-                    collect.transform.Translate(Vector3.forward * punchForce);
+                    
+                    collect.transform.Rotate(punchForce  * Time.deltaTime * Vector3.up, rotateAngle);
+                    
+                    
                 }
             }
             else
@@ -131,6 +138,11 @@ public class PlayerController : MonoBehaviour
             transform.rotation = rotation;
         }
 
+    }
+
+    IEnumerator HitLatence(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
     }
     
 }

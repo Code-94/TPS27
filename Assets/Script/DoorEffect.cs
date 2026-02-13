@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class DoorEffect : MonoBehaviour
 {
-    [SerializeField] private KeyEvent _key;
-
+    [SerializeField] private KeyEvent _key1;
+    [SerializeField] private KeyEvent _key2;
+    
     private Animator _animator;
     public bool isOpen;
     
@@ -16,7 +17,7 @@ public class DoorEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_key.isGrabbed)
+        if (_key1.isGrabbed || _key2.isGrabbed)
         {
             isOpen = true;
             
