@@ -13814,7 +13814,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09494364, y: -3.2897844e-11, z: 3.137615e-12, w: 0.9954827}
-  m_LocalPosition: {x: -1.7, y: 3.8899999, z: -25.35}
+  m_LocalPosition: {x: 0.94, y: 3.29, z: -39.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24070,7 +24070,7 @@ Transform:
   m_GameObject: {fileID: 725976897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7, y: 1.64, z: -21.35}
+  m_LocalPosition: {x: 0.94, y: 1.04, z: -35.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -24098,7 +24098,7 @@ MonoBehaviour:
   fallFactor: 10
   jumpHeight: 2
   punchForce: 2
-  target1: {fileID: 909099531}
+  target: {fileID: 909099531}
   rotateAngle: 50
 --- !u!114 &725976900
 MonoBehaviour:
@@ -33000,8 +33000,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 200, y: 5, z: 175}
-  m_Center: {x: 0.14922428, y: -5.9872932, z: 0.09518576}
+  m_Size: {x: 268.03415, y: 5, z: 175}
+  m_Center: {x: -33.867905, y: -5.9872932, z: 0.095184326}
 --- !u!1 &951771884
 GameObject:
   m_ObjectHideFlags: 0
@@ -39087,7 +39087,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -45690,7 +45690,7 @@ Transform:
   m_GameObject: {fileID: 1920847380}
   serializedVersion: 2
   m_LocalRotation: {x: 0.094943635, y: -3.2036096e-11, z: -5.8978144e-12, w: 0.9954827}
-  m_LocalPosition: {x: -1.7, y: 3.8899999, z: -25.35}
+  m_LocalPosition: {x: 0.94, y: 3.29, z: -39.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58539,7 +58539,7 @@ GameObject:
   - component: {fileID: 2126531697}
   - component: {fileID: 2126531696}
   - component: {fileID: 2126531695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58599,7 +58599,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 185d3733e563a3744a3c1f651cefee82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

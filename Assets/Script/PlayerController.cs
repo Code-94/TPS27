@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float fallFactor;
     [SerializeField] private float jumpHeight;
     [SerializeField] private float punchForce;
-    [SerializeField] private TargetDetector target1;
+    [SerializeField] private TargetDetector target;
     [SerializeField] private float rotateAngle;
 
     private PlayerI _input;
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _controller;
     private float _horizontalVelocity;
     private Vector3 _verticalVelocity;
+    
     
     
     
@@ -76,17 +77,14 @@ public class PlayerController : MonoBehaviour
             if (_input.punchInput)
             {
                 _animator.SetBool("OnPunch", true);
-                
-                var smashedObj = target1.Smashed();
-                
-                
+                var smashedObj = target.Smashed();
+         
                 foreach (Collider collect in smashedObj)
                 {
                     
                     collect.transform.Rotate(punchForce  * Time.deltaTime * Vector3.up, rotateAngle);
-                    
-                    
                 }
+                
             }
             else
             {
@@ -140,9 +138,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    IEnumerator HitLatence(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-    }
+     
     
 }

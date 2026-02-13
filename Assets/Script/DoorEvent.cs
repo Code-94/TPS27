@@ -17,7 +17,7 @@ public class DoorEvent : MonoBehaviour
     {
         if (key.isGrabbed)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
     

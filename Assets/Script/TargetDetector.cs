@@ -7,6 +7,8 @@ public class TargetDetector : MonoBehaviour
     [SerializeField] private Vector3 boxSize;
 
     [SerializeField] private LayerMask layermask;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
